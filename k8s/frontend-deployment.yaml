@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: lms-frontend
-        image: yourdockerhubusername/lms-frontend
+        image: manipinnaka1125/lms-frontend
         ports:
         - containerPort: 80
 ---
