@@ -1,0 +1,17 @@
+- name: Deploy Frontend
+  hosts: all
+  become: true
+  tasks:
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+
+    - name: Build and push Docker image
+      shell: |
+        cd /home/ubuntu/lms-frontned1
+        docker build -t manipinnaka1125/lms-frontend .
+        docker push manipinnaka1125/lms-frontend
+
+    - name: Deploy to Kubernetes
+      shell: kubectl apply -f /home/ubuntu/lms-frontned1/k8s/frontend-deployment.yaml
