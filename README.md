@@ -1,40 +1,56 @@
 **note: we have stoped the backend deployment due to the cost so if you want to run our lms you can clone and run it 
 
+## Learning Management System (LMS) – Project Overview
 
+**Project Name**: Learning Management System (LMS)  
+**Frontend**: React (Deployed on Netlify)  
+**Backend**: Spring Boot (Temporarily stopped due to cost; previously deployed on Railway.app)  
+**Database**: MySQL
 
-for testing purpose of the lms
-go to login --> first login as admin 
-email:admin@example.com
-password:admin123
-role:admin
+### Project Description
+This LMS project is designed to manage and streamline the educational experience for three key user roles: **Admin**, **Instructor**, and **Student**. The system supports course management, user authentication with OTP, and role-based dashboards.
 
-we can add the students,instructors
-we can also add the courses and also assign courses 
+---
 
-after adding all the students,instructors,courses,assigncourses
+### Roles & Functionalities
 
-login as student we will get the otp to our mail 
-when we enter otp only we we will enter into the student dashboard and for instructor also same 
- we can see our courses and all the courses and also our material 
+#### 1. **Admin**
+- Login Credentials:  
+  - **Email**: `admin@example.com`  
+  - **Password**: `admin123`  
+  - **Role**: `admin`
+- Features:
+  - Add and manage Students and Instructors
+  - Create and manage Courses
+  - Assign Courses to Students and Instructors
 
-in instructor he can add the courses
-The team Members involved are 
- P.Mani Swaroop (Team Lead)
- V.Lokesh
+#### 2. **Instructor**
+- Must be added by Admin
+- Features:
+  - View assigned courses
+  - Add new courses
+  - View course materials
 
- so basically we have done the project lms(learning management system)
-where we basically have 3 roles admin,student,instructor
+#### 3. **Student**
+- Must be added by Admin
+- Features:
+  - Access assigned courses
+  - View course materials
+  - Secure OTP-based login (6-digit code sent to registered email)
 
-what we can do it means 
+---
 
-in the admin dashboard we can add the students,instructors,courses and also we can assign the courses properly
+### Authentication Flow
+- Students and Instructors receive a **6-digit OTP via email** upon login.
+- Access to the dashboard is granted only after successful OTP verification.
 
-if we want to login as student or the instructor firstly u have to add in the admin dashboard there is 6-digit otp verification
+---
 
-frontend is built using the react and backend (springboot) database-->mysql
+### Development & Deployment
+- **Frontend**: Built with React, deployed on **Netlify**
+- **Backend**: Built with Spring Boot, connected to **MySQL** database (Currently offline)
+- **Note**: To run the full system locally, clone the repository and run both frontend and backend services manually.
 
-we have deployed the frontend in netlify and backend in the railway.app 
- 
-
-you can contribute to our project you can do all the enhancements lots of love ..
-
+### Contribution
+We welcome contributions! Feel free to fork the repository and suggest enhancements or new features.  
+**Thank you for your support and interest in our LMS project!**
